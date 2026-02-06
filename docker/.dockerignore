@@ -1,0 +1,22 @@
+cat > docker/wordpress/.dockerignore << 'EOF'
+# Fichiers Git
+.git
+.gitignore
+.github
+
+# Documentation
+*.md
+README.md
+
+# Fichiers de configuration du projet
+buildspec.yml
+task-definition.json
+
+# Fichiers temporaires
+*.tmp
+*.log
+.DS_Store
+
+# Node modules (si vous utilisez npm)
+node_modules/
+EOF
