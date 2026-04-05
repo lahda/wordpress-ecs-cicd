@@ -4,12 +4,12 @@
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "512",
   "memory": "1024",
-  "executionRoleArn": "arn:aws:iam::934692410245:role/ecsTaskExecutionRole",
-  "taskRoleArn": "arn:aws:iam::934692410245:role/ecsTaskRole",
+  "executionRoleArn": "arn:aws:iam::423503571168:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::423503571168:role/ecsTaskRole",
   "containerDefinitions": [
     {
       "name": "wordpress",
-      "image": "934692410245.dkr.ecr.us-east-1.amazonaws.com/wordpress",
+      "image": "423503571168.dkr.ecr.us-east-1.amazonaws.com/wordpress",
       "portMappings": [
         {
           "containerPort": 80,
@@ -20,7 +20,7 @@
       "environment": [
         {
           "name": "WORDPRESS_DB_HOST",
-          "value": "wordpress-db.c83oueisqcxc.us-east-1.rds.amazonaws.com"
+          "value": "wordpress-db.catmw2awyd38.us-east-1.rds.amazonaws.com"
         },
         {
           "name": "WORDPRESS_DB_USER",
@@ -34,7 +34,7 @@
       "secrets": [
         {
           "name": "WORDPRESS_DB_PASSWORD",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:934692410245:secret:wordpress/db/password-XiQUlm"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:423503571168:secret:wordpress/db/password-PJJ6Pt"
         }
       ],
       "mountPoints": [
@@ -58,10 +58,10 @@
     {
       "name": "wordpress-efs",
       "efsVolumeConfiguration": {
-        "fileSystemId": "fs-02859bd09eade1bec",
+        "fileSystemId": "fs-0daaebf605585a590",
         "transitEncryption": "ENABLED",
         "authorizationConfig": {
-          "accessPointId": "fsap-046af20562ebb40c4",
+          "accessPointId": "fsap-0af4264ea4b85d1a5",
           "iam": "ENABLED"
         }
       }
